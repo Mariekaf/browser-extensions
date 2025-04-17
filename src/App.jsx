@@ -3,6 +3,7 @@ import './style/main.scss';
 import Nav from './components/Nav';
 import Card from './components/Cards';
 import Filter from './components/Filter';
+import devlens from './assets/images/logo-devlens.svg'
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
@@ -44,7 +45,7 @@ const App = () => {
   }, [darkMode]);
 
   const [cards, setCards] = useState([
-    { id: 1, imageSrc: "./src/assets/images/logo-devlens.svg", title: "DevLens", paragraph: "Quickly inspect page layouts and visualize element boundaries.", isVisible: true, active: false },
+    { id: 1, imageSrc: {devlens}, title: "DevLens", paragraph: "Quickly inspect page layouts and visualize element boundaries.", isVisible: true, active: false },
     { id: 2, imageSrc: "./src/assets/images/logo-style-spy.svg", title: "StyleSpy", paragraph: "Instantly analyze and copy CSS from any webpage element.", isVisible: true, active: false },
     { id: 3, imageSrc: "./src/assets/images/logo-speed-boost.svg", title: "SpeedBoost", paragraph: "Optimizes browser resource usage to accelerate page loading.", isVisible: true, active: false },
     { id: 4, imageSrc: "./src/assets/images/logo-json-wizard.svg", title: "JsonWizard", paragraph: "Formats, validates, and prettifies JSON responses in-browser.", isVisible: true, active: false },
@@ -62,7 +63,7 @@ const App = () => {
     <div className='test'>
       <Nav onClick={() => { setDarkMode(prev => !prev); changeImage(); }} />
 
-      {/* Le composant Filter reçoit la fonction handleToggleAllCards pour contrôler la visibilité */}
+
       <Filter isDark={isDark} handleToggleAllCards={handleToggleAllCards} />
 
       <div className='display'>
@@ -78,7 +79,7 @@ const App = () => {
               active={card.active}
               isDark={isDark}
               handleClickvisible={() => handleClickvisible(card.id)}
-              onToggleActive={toggleCardActive} 
+              onToggleActive={toggleCardActive}
             />
           ) : null
         )}
