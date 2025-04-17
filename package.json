@@ -2,14 +2,14 @@
   "name": "browser-extensions",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ton-nom-utilisateur.github.io/nom-du-repo",
+  "homepage": "https://Mariekaf.github.io/browser-extensions",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-      "predeploy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   
