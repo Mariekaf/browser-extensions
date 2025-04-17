@@ -1,0 +1,34 @@
+@use './settings' as *;
+@use './main.module.scss' as *;
+
+
+body {
+    margin: 0;
+    height: 0;
+    width: 1440px;
+    height: auto;
+    @include Dark-Gradient;
+    @include theme-mode(light);
+    transition: all 0.3s ease, color 0.3s ease;
+
+}
+
+.dark {
+    @include theme-mode(dark);
+}
+
+.filter {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    border-radius: 15px;
+   
+
+   
+}
+.test{
+    width: 100%;
+}

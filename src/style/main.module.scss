@@ -1,0 +1,212 @@
+@use './settings' as *;
+
+
+.mode {
+    width: 45px;
+    height: 45px;
+    @include verticalCenter;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.display {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: -20px auto;
+}
+
+@mixin theme-mode($mode) {
+    @if $mode ==dark {
+        background: linear-gradient(180deg, #040918 0%, #091540 100%);
+        color: white;
+
+        .filter {
+            color: white;
+        }
+
+        .card {
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+            background-color: hsla(226, 24%, 17%, 0.555);
+            border: 1px solid rgba(99, 98, 98, 0.253);
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-left: 20px;
+            color: white;
+
+            img {
+                float: left;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 300;
+                margin-top: 10px
+            }
+
+            button {
+
+                @include bouton;
+                background-color: hsla(226, 24%, 17%, 0.555);
+                border: 1px solid rgba(196, 195, 195, 0.486);
+                color: white;
+                height: 40px;
+                margin-top: 40px;
+                margin-left: -5px;
+
+
+                &:hover {
+                    background-color: hsl(3, 71%, 56%);
+                    color: hsl(227, 75%, 14%);
+                }
+            }
+
+            .i {
+                font-size: 50px;
+                margin-top: 40px;
+                padding-right: 10px;
+                background-color: hsl(0, 1%, 44%);
+            }
+
+        }
+    }
+
+    @else {
+        background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+        color: hsl(227, 75%, 14%);
+
+        .filter {
+            color: hsl(227, 75%, 14%);
+        }
+
+        .card {
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+            background-color: hsl(200, 60%, 99%);
+            border: 1px solid rgba(99, 98, 98, 0.253);
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-left: 20px;
+            color: hsl(227, 75%, 14%);
+
+            img {
+                float: left;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+            button {
+                @include bouton;
+                border: 1px solid rgba(99, 98, 98, 0.253);
+                color: hsl(227, 75%, 14%);
+                height: 40px;
+                margin-top: 50px;
+                margin-left: -5px;
+
+                &:hover {
+                    background-color: hsl(3, 77%, 44%);
+                    color: hsl(227, 75%, 14%);
+                }
+            }
+
+            .bx {
+                font-size: 50px;
+                margin-top: 40px;
+                padding-right: 10px;
+
+            }
+
+
+        }
+    }
+}
+
+
+
+.btn-light {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.btn-dark {
+    background-color: hsl(225, 23%, 24%);
+}
+
+.Navbar_dark {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    background-color: hsl(226, 25%, 17%);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.Navbar_light {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    background-color: hsl(200, 60%, 99%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px hsl(217, 61%, 90%);
+}
+
+.active_dark {
+    background-color: hsl(3, 86%, 64%);
+    box-shadow: 1px 1px 2px hsl(213, 6%, 36%);
+    color: hsl(227, 75%, 14%);
+    @include bouton;
+
+    &:hover {
+        background-color: #525768;
+    }
+}
+
+.active_light {
+    background-color: hsl(3, 77%, 44%);
+    box-shadow: 1px 1px 2px hsl(213, 6%, 36%);
+    color: white;
+    @include bouton;
+
+    &:hover {
+        background-color: #525768;
+    }
+}
+
+.buttons1 {
+    background-color: #2e344a;
+    box-shadow: 1px 1px 2px hsl(213, 6%, 36%);
+    color: white;
+    @include bouton;
+
+    &:hover {
+        background-color: #525768;
+    }
+}
+
+.buttons2 {
+    @include bouton;
+    background-color: hsl(200, 60%, 99%);
+    color: hsl(227, 75%, 14%);
+    box-shadow: 1px 1px 2px hsl(216, 24%, 80%);
+
+    &:hover {
+        background-color: #525768;
+    }
+
+}

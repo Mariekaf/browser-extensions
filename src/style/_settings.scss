@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+$color1: 'hsl(227, 75%, 14%)';
+$color2: 'hsl(226, 25%, 17%)';
+$color3: 'hsl(225, 23%, 24%)';
+$color4: 'hsl(0, 0%, 78%)';
+$color6: 'hsl(217, 61%, 90%)';
+$color6: 'hsl(0, 0%, 93%)';
+$color7: 'hsl(200, 60%, 99%)';
+$red1: 'hsl(3, 86%, 64%)';
+$red2: 'hsl(3, 71%, 56%)';
+$red3: 'hsl(3, 77%, 44%)';
+
+
+$family: "Noto Sans", sans-serif;
+@mixin Light-Gradient {
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}
+@mixin bouton{
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 1rem;
+    
+   
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+   
+    white-space: nowrap;
+    min-width: fit-content;
+}
+@mixin Dark-Gradient {
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 1rem auto;
+    font-family: $family;
+    color: black;
+   
+   
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+}
+
+a:visited {
+    color: black;
+}
